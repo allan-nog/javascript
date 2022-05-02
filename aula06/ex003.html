@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Meu primeiro programa... </title>
+
+    <style>
+        
+        body{
+            background-color: #6969AD;
+            font-family: "Poppins", sans-serif;
+            color: #FFF;
+            font-size: 22px;
+        }
+
+        h1{
+            color: springgreen;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    
+    <h1> Olá, mundo! </h1>
+    <p> Já me livrei da maldição </p>
+
+    <script>
+
+        var s = 'JavaScript' 
+
+        alert('Eu estou aprendendo s') //Não faz interpolação
+        alert('Eu estou aprendendo ' + s) // Usa concatenação
+        alert(`Eu estou aprendendo ${s}`) // Usa template string //Tudo para 'minúsculas'
+
+
+        var n1 = Number(prompt('Digite um número')) //Recebe uma string
+        var n2 = Number(prompt('Digite outro número')) //Recebe uma string mas estamos convertendo com o parseInt
+
+        var soma = n1 + n2
+
+        alert(`A soma entre ${n1} e ${n2} é igual a ${soma}`) //Concatenação
+        // (number + number) para adição
+        // (string + string) para concatenação
+
+    </script>
+
+</body>
+
+</html>

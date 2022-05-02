@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> DETRAN </title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+        }
+
+        body{
+            padding: 20px;
+        }
+
+        h1{
+            font-size: 26px;
+            margin: 30px 0;
+        }
+
+        input[type='button'] {
+            padding: 10px 20px;
+            background-color: aquamarine;
+            border: none;
+            border-radius: 30px;
+            display: block;
+            margin: 20px 0;
+            color: #FFF;
+        }
+
+        input[type='number'], input[type='text']{
+            padding: 5px;
+            margin-left: 10px;
+        }
+
+        p{
+            margin: 5px 0;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1> Sistema de multas </h1>
+
+    <label for="txtVel"> Velocidade do carro: </label>
+    <input type="number" name="txtVel" id="txtVel"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+
+    <div id="resultado1">
+
+    </div>
+
+
+    <h1> Sistema de Nacionalidade </h1>
+    <label for="txtVel"> Qual seu país? </label>
+    <input type="text" name="txtPais" id="txtPais">
+    <input type="button" value="Analizar" onclick="verificar()">
+
+    <div id="resultado2"> 
+
+    </div>
+
+
+
+    <script>
+
+        
+        function calcular() {
+
+            var txtv = document.getElementById('txtVel')
+            var resultado = document.querySelector('div#resultado1')
+            var vel = Number(txtv.value)
+            
+            resultado1.innerHTML = `<div> Sua velocidade atual é de <strong> ${vel} Km/h </strong> </div>`
+
+            if (vel > 60){
+                resultado1.innerHTML += `<div> Você está <strong> MULTADO </strong> por excesso de velocidade </div>`
+            }
+
+            resultado1.innerHTML += `<div> Dirija sempre com cinto de segurança! </div>`
+
+        }
+
+        function verificar() {
+            
+            var txtPaís = document.getElementById('txtPais')
+            var resultado2 = document.querySelector('div#resultado2')
+
+            resultado2.innerHTML = `<div> Você está vivendo em <strong> ${txtPaís.value} </strong> </div>`
+
+            if (txtPaís.value == 'Brasil') {
+                resultado2.innerHTML += `<div> Você é Brasileiro! </div>`
+            } else {
+                resultado2.innerHTML += `<div> Você é Estrangeiro! </div>`
+            }
+
+        }
+
+    </script>
+    
+</body>
+
+</html>
